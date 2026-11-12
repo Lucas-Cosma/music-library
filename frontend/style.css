@@ -1,0 +1,230 @@
+/* ============================================================
+   Music Library — Frontend Styles
+   ============================================================ */
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  
+  /* ===================== NAVBAR ===================== */
+  .navbar {
+    background: #1d1d1f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .nav-brand {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #1db954;
+  }
+  
+  /* ===================== PAGE LAYOUT ===================== */
+  .container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .page {
+    display: none;
+  }
+  
+  .page.active {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .hint {
+    color: #888;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  
+  /* ===================== HOME STATS ===================== */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1db954;
+  }
+  
+  .stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* ===================== FORMS ===================== */
+  .crud-form {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  .crud-form input,
+  .crud-form select {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    flex: 1 1 160px;
+    min-width: 0;
+  }
+  
+  .crud-form input:focus,
+  .crud-form select:focus {
+    outline: none;
+    border-color: #1db954;
+  }
+  
+  button {
+    padding: 0.55rem 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background: #1db954;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+  }
+  
+  button:hover {
+    background: #18a849;
+  }
+  
+  button.cancel {
+    background: #888;
+  }
+  
+  button.cancel:hover {
+    background: #666;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /* ===================== TABLES ===================== */
+  .data-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .data-table th {
+    background: #fafafa;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #555;
+  }
+  
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .data-table tr:hover {
+    background: #fafafa;
+  }
+  
+  .action-btns {
+    display: flex;
+    gap: 0.4rem;
+  }
+  
+  .action-btns button {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .btn-edit {
+    background: #007aff;
+  }
+  
+  .btn-edit:hover {
+    background: #0066d6;
+  }
+  
+  .btn-delete {
+    background: #ff3b30;
+  }
+  
+  .btn-delete:hover {
+    background: #d62b22;
+  }

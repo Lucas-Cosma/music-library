@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand"> Music Library</div>
+    <ul class="nav-links">
+      <li><a href="#" data-page="home"    class="active">Home</a></li>
+      <li><a href="#" data-page="artists">Artists</a></li>
+      <li><a href="#" data-page="albums">Albums</a></li>
+      <li><a href="#" data-page="songs">Songs</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <h1>Welcome to your Music Library </h1>
+      <p class="subtitle">A small full-stack app for managing artists, albums and songs.</p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-artists">–</div>
+          <div class="stat-label">Artists</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-albums">–</div>
+          <div class="stat-label">Albums</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-songs">–</div>
+          <div class="stat-label">Songs</div>
+        </div>
+      </div>
+
+      <p class="hint">Use the navigation bar above to browse and manage your library.</p>
+    </section>
+
+    <!-- ARTISTS -->
+    <section id="artists" class="page">
+      <h1>Artists</h1>
+
+      <form id="artist-form" class="crud-form">
+        <input type="hidden" id="artist-id" />
+        <input type="text"   id="artist-name"   placeholder="Artist name" required />
+        <input type="text"   id="artist-genre"  placeholder="Genre" />
+        <input type="number" id="artist-listeners" placeholder="Monthly listeners" min="0" />
+        <button type="submit" id="artist-submit">Add Artist</button>
+        <button type="button" id="artist-cancel" class="cancel hidden">Cancel</button>
+      </form>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Genre</th><th>Monthly listeners</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="artists-tbody"></tbody>
+      </table>
+    </section>
+
+    <!-- ALBUMS -->
+    <section id="albums" class="page">
+      <h1>Albums</h1>
+
+      <form id="album-form" class="crud-form">
+        <input type="hidden" id="album-id" />
+        <input type="text"   id="album-name"  placeholder="Album name" required />
+        <input type="number" id="album-year"  placeholder="Release year" />
+        <input type="number" id="album-listens" placeholder="Listens" min="0" />
+        <select id="album-artist" required>
+          <option value="">Choose artist…</option>
+        </select>
+        <button type="submit" id="album-submit">Add Album</button>
+        <button type="button" id="album-cancel" class="cancel hidden">Cancel</button>
+      </form>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Year</th><th>Listens</th><th>Artist</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="albums-tbody"></tbody>
+      </table>
+    </section>
+
+    <!-- SONGS -->
+    <section id="songs" class="page">
+      <h1>Songs</h1>
+
+      <form id="song-form" class="crud-form">
+        <input type="hidden" id="song-id" />
+        <input type="text"   id="song-name" placeholder="Song name" required />
+        <input type="number" id="song-year" placeholder="Release year" />
+        <select id="song-album" required>
+          <option value="">Choose album…</option>
+        </select>
+        <button type="submit" id="song-submit">Add Song</button>
+        <button type="button" id="song-cancel" class="cancel hidden">Cancel</button>
+      </form>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Year</th><th>Album</th><th>Artist</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="songs-tbody"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
